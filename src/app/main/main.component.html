@@ -1,0 +1,68 @@
+<div class="container text-center p-20">
+	<h1 class="text-shadow">Rock, Paper, Scissors!</h1>
+</div>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-6 mt-20">
+    	<p class="text-shadow s-24">User: {{userScore}}</p>
+    	<div class="card box-shadow card-height">
+		  	<div class="card-body">
+		  		<div *ngIf="loading == true" class="d-flex justify-content-center">
+				  	<div class="spinner-border text-dark" role="status">
+				    	<span class="sr-only">Loading...</span>
+				  	</div>
+				</div>
+		    	<div *ngIf="choice == 'rock'">
+					<fa-icon class="game-picks" [icon]="['far', 'hand-rock']"></fa-icon>
+				</div>
+				<div *ngIf="choice == 'paper'">
+					<fa-icon class="game-picks" [icon]="['far', 'hand-paper']"></fa-icon>
+				</div>
+				<div *ngIf="choice == 'scissors'">
+					<fa-icon class="game-picks" [icon]="['far', 'hand-scissors']"></fa-icon>
+				</div>
+		  	</div>
+		</div>
+    </div>
+    <div class="col-sm-6 mt-20">
+    	<p class="text-shadow s-24">Computer: {{compScore}}</p>
+    	<div class="card box-shadow card-height">
+		  	<div class="card-body">
+		  		<div *ngIf="loading == true" class="d-flex justify-content-center">
+				  	<div class="spinner-border text-dark" role="status">
+				    	<span class="sr-only">Loading...</span>
+				  	</div>
+				</div>
+		    	<div *ngIf="compChoice == 'rock'">
+					<fa-icon class="game-picks" [icon]="['far', 'hand-rock']"></fa-icon>
+				</div>
+				<div *ngIf="compChoice == 'paper'">
+					<fa-icon class="game-picks" [icon]="['far', 'hand-paper']"></fa-icon>
+				</div>
+				<div *ngIf="compChoice == 'scissors'">
+					<fa-icon class="game-picks" [icon]="['far', 'hand-scissors']"></fa-icon>
+				</div>
+		  	</div>
+		</div>
+    </div>
+  </div>
+  <div class="row mt-20">
+  	<div class="col capitalize">
+  		<p class="text-shadow s-24">Tie: {{tieScore}}</p>
+  		<p class="text-shadow s-50 mt-20">Winner: {{winner}}</p>
+  	</div>
+  </div>
+</div>
+
+<div class="text-center mt-20">
+	<button type="button" class="btn btn-secondary m-20 box-shadow">
+		<fa-icon (click)="selectOption('rock')" class="text-shadow user-picks" [icon]="['far', 'hand-rock']"></fa-icon>
+	</button>
+	<button type="button" class="btn btn-secondary m-20 box-shadow">
+		<fa-icon (click)="selectOption('paper')" class="text-shadow user-picks" [icon]="['far', 'hand-paper']"></fa-icon>
+	</button>
+	<button type="button" class="btn btn-secondary m-20 box-shadow">
+		<fa-icon (click)="selectOption('scissors')" class="text-shadow user-picks" [icon]="['far', 'hand-scissors']"></fa-icon>
+	</button>
+</div>

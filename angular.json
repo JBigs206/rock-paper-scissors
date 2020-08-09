@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "rock-paper-scissors"
+    }
+  },
+  "defaultProject": "rock-paper-scissors",
+  "cli": {
+    "analytics": "d4ac14b7-9d57-4b28-81d3-2cec4afbd1e0"
+  }
 }
